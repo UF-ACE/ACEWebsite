@@ -2,7 +2,7 @@ import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
-  content: ["./src/**/*.tsx"],
+  content: ["./pages/**/*.tsx"],
   theme: {
     extend: {
       fontFamily: {
@@ -10,5 +10,8 @@ export default {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins:  [require("daisyui")],
+  daisyui: {
+    themes: ["light"]
+  }
 } satisfies Config;
