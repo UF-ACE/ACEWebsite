@@ -5,20 +5,22 @@ import Announcement from './components/announcement';
 
 export default function Announcements() {
    const searchParams = useSearchParams();  
-   const showModal = searchParams.get('modal');
+   const addModal = searchParams.get('modal');
     return (
         <>   
         <div className="flex min-h-screen flex-col items-center justify-center">
-            <div className="w-3/5 my-2">
-                <Announcement/>
-            </div>                    
             <Link
                 href="/announcements?modal=true"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute right-2 top-2">
                 add announcement
             </Link>
-
-            {showModal && <CreateAnnouncementModal />}
+            <div className="w-3/5 my-2">
+                <Announcement/>
+                <Announcement/>
+                <Announcement/>
+                <Announcement/>
+            </div>                    
+            {addModal && <CreateAnnouncementModal />}
         </div>
     </>
     );

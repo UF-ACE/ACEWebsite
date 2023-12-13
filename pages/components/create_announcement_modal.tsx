@@ -34,7 +34,7 @@ export default function CreateAnnouncementModal() {
                             Create Announcement
                         </h3>
                         <div className="mt-2">
-                            <input placeholder="title"/>
+                        <input type="text" placeholder="title of announcement" className="input input-bordered w-full max-w-xs" />
                         </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ export default function CreateAnnouncementModal() {
                         <Link
                         href="/announcements"
                         type="button"
-                        className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+                        className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
                         >
                         OK
                         </Link>
